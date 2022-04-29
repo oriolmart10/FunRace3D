@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://models/monu1.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://models/monu1.png" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="Plano" type="Spatial"]
+
+[node name="Castell" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.942472, -0.146094, 0.30067, 0, 0.899444, 0.437037, -0.334284, -0.411895, 0.847701, 5.22301, 12.5804, 12.8937 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.999573, 0.0209709, -0.0203371, 0, 0.696176, 0.717871, 0.0292127, -0.717565, 0.695879, 2.59264, 12.8566, 6.89463 )
