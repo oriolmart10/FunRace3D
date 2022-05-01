@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://materials/Terrain.meshlib" type="MeshLibrary" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 1, 1 )
+data = {
+"cells": PoolIntArray( 1, 2, 0, 1, 65523, 0, 1, 65526, 0, 1, 65529, 0, 1, 65532, 0, 1, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.928207, 0, 0.372065, 0, 1, 0, -0.372065, 0, 0.928207, 6.80301, 8.25925, 4.08055 )
+shadow_enabled = true
