@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://materials/metal.tres" type="Material" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 2.0
 height = 5.0
 
 [sub_resource type="CapsuleMesh" id=2]
+material = ExtResource( 2 )
 radius = 2.0
 mid_height = 5.0
 

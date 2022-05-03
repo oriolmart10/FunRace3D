@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/Walking.fbx" type="PackedScene" id=1]
+[ext_resource path="res://models/PJ.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Walking.gd" type="Script" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[node name="Walking" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="unamed" parent="RootNode" index="1"]
+material/0 = SubResource( 1 )
+
+[node name="AnimationPlayer" parent="RootNode" index="3"]
+autoplay = "mixamo.com"
