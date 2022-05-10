@@ -18,8 +18,8 @@ config/icon="res://icon.png"
 
 window/size/width=1920
 window/size/height=1080
-window/size/test_width=1280
-window/size/test_height=720
+window/size/test_width=1920
+window/size/test_height=1080
 
 [importer_defaults]
 
@@ -29,6 +29,27 @@ wavefront_obj={
 "offset_mesh": Vector3( 0, 0, 0 ),
 "optimize_mesh_flags": 4286,
 "scale_mesh": Vector3( 1, 1, 1 )
+}
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 2,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": true,
+"flags/mipmaps": true,
+"flags/repeat": true,
+"flags/srgb": 1,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
 }
 
 [input]
@@ -45,5 +66,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/filters/msaa=1
+quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"
