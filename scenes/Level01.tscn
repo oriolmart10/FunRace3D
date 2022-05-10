@@ -255,7 +255,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67599, 2.40828, 1.20934 )
 curve = SubResource( 4 )
 
 [node name="PathFollow" type="PathFollow" parent="PathPlayer1"]
-transform = Transform( 0.0437054, 6.72175e-11, -0.999044, 4.98045e-10, 1, 8.90701e-11, 0.999044, -5.01463e-10, 0.0437054, -3.48091e-05, 3.09944e-06, 0.352958 )
+transform = Transform( 0.999947, 0, -0.0102364, 0, 1, 0, 0.0102364, 0, 0.999947, -4.58181, 3.09944e-06, 26.0406 )
+offset = 30.399
+rotation_mode = 1
 
 [node name="Player" parent="PathPlayer1/PathFollow" instance=ExtResource( 2 )]
-transform = Transform( 0.0168796, 3.1879e-10, 0.799822, 4.6127e-10, 0.8, -3.28595e-10, -0.799822, 4.68101e-10, 0.0168796, -1.19209e-07, 0.550325, 4.76837e-07 )
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.483061, 0 )
