@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Bloc.png-86393b95d44c854774737b0a4afe9c7c.s3tc.stex"
-path.etc2="res://.import/Bloc.png-86393b95d44c854774737b0a4afe9c7c.etc2.stex"
+path.s3tc="res://.import/Arm.png-0ffc5dc8991f8fa38639ce70f5e6e9ed.s3tc.stex"
+path.etc2="res://.import/Arm.png-0ffc5dc8991f8fa38639ce70f5e6e9ed.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/Bloc.png"
-dest_files=[ "res://.import/Bloc.png-86393b95d44c854774737b0a4afe9c7c.s3tc.stex", "res://.import/Bloc.png-86393b95d44c854774737b0a4afe9c7c.etc2.stex" ]
+source_file="res://models/player/Arm.png"
+dest_files=[ "res://.import/Arm.png-0ffc5dc8991f8fa38639ce70f5e6e9ed.s3tc.stex", "res://.import/Arm.png-0ffc5dc8991f8fa38639ce70f5e6e9ed.etc2.stex" ]
 
 [params]
 

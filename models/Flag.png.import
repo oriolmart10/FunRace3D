@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Plano.png-1de662f1c21c1452b27f66e6c8b34a62.s3tc.stex"
-path.etc2="res://.import/Plano.png-1de662f1c21c1452b27f66e6c8b34a62.etc2.stex"
+path.s3tc="res://.import/Flag.png-7630cc4a9b50ec1e673956619086da30.s3tc.stex"
+path.etc2="res://.import/Flag.png-7630cc4a9b50ec1e673956619086da30.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/Plano.png"
-dest_files=[ "res://.import/Plano.png-1de662f1c21c1452b27f66e6c8b34a62.s3tc.stex", "res://.import/Plano.png-1de662f1c21c1452b27f66e6c8b34a62.etc2.stex" ]
+source_file="res://models/Flag.png"
+dest_files=[ "res://.import/Flag.png-7630cc4a9b50ec1e673956619086da30.s3tc.stex", "res://.import/Flag.png-7630cc4a9b50ec1e673956619086da30.etc2.stex" ]
 
 [params]
 

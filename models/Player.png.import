@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/CuboRaro.png-97b659c3cd9e77012fd1ad387cfb8cfd.s3tc.stex"
-path.etc2="res://.import/CuboRaro.png-97b659c3cd9e77012fd1ad387cfb8cfd.etc2.stex"
+path.s3tc="res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.s3tc.stex"
+path.etc2="res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/CuboRaro.png"
-dest_files=[ "res://.import/CuboRaro.png-97b659c3cd9e77012fd1ad387cfb8cfd.s3tc.stex", "res://.import/CuboRaro.png-97b659c3cd9e77012fd1ad387cfb8cfd.etc2.stex" ]
+source_file="res://models/Player.png"
+dest_files=[ "res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.s3tc.stex", "res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.etc2.stex" ]
 
 [params]
 
