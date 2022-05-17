@@ -8,16 +8,18 @@ func _ready():
 	set_as_toplevel(true)
 
 func _physics_process(delta):
-	var target = get_parent().get_global_transform().origin
-	var pos = get_global_transform().origin
+	
+	var target_pos = get_parent().get_transform().origin
+	var pos = get_transform().origin
 	var up = Vector3(0,1,0)
 	
-	var offset = pos - target
+	var offset = pos - target_pos
 	
 	offset = offset.normalized() * distance
 	offset.y = height
 	
-	pos = target + offset
+	pos = target_pos + offset
 	
-	look_at_from_position(pos, target, up)
+	look_at_from_position(pos, target_pos, up)
 	 
+

@@ -13,6 +13,8 @@ func _physics_process(delta):
 		offset = offset + velocity
 		if current_state == RUN:
 			animationPlayer.play("Run")
+		if offset >= 20:
+			queue_free()
 	else:
 		current_state = IDLE
 		animationPlayer.play("Idle")
