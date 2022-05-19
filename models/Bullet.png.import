@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.s3tc.stex"
-path.etc2="res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.etc2.stex"
+path.s3tc="res://.import/Bullet.png-4c23c2e51180732e1e4b82b3f8703a14.s3tc.stex"
+path.etc2="res://.import/Bullet.png-4c23c2e51180732e1e4b82b3f8703a14.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/Player.png"
-dest_files=[ "res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.s3tc.stex", "res://.import/Player.png-90d2c5c84d01a9c7eda0829e034b32fc.etc2.stex" ]
+source_file="res://models/Bullet.png"
+dest_files=[ "res://.import/Bullet.png-4c23c2e51180732e1e4b82b3f8703a14.s3tc.stex", "res://.import/Bullet.png-4c23c2e51180732e1e4b82b3f8703a14.etc2.stex" ]
 
 [params]
 
