@@ -6,8 +6,9 @@
 [ext_resource path="res://scenes/SplitScreen.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve3D" id=5]
+bake_interval = 0.01
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0, 0.3, 0, 0, 0, 0, 0, 0, 0, 0, 0.3, 20, 0, 0, 0, 0, 0, 0, -5, 0.3, 20, 0, 0, 0, 0, 0, 0, -5, 0.3, 34 ),
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0, 0.3, 0, 1.5, -0.2, -1.7, -1.5, 0.2, 1.7, 0, 0.3, 20, 1, 0, -2, -1, 0, 2, -5, 0.3, 20, 0, 0, 0, 0, 0, 0, -5, 0.3, 34 ),
 "tilts": PoolRealArray( 0, 0, 0, 0 )
 }
 
@@ -230,7 +231,7 @@ shader_param/wave_speed = 1.5
 [node name="HBoxContainer" parent="." instance=ExtResource( 4 )]
 
 [node name="Path" type="Path" parent="HBoxContainer/ViewportContainer/Viewport" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, 2 )
 curve = SubResource( 5 )
 
 [node name="PathFollow" parent="HBoxContainer/ViewportContainer/Viewport/Path" instance=ExtResource( 1 )]

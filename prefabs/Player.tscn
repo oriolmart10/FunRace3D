@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://models/player/Body.png" type="Texture" id=1]
 [ext_resource path="res://models/player/Arm.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://models/player/Leg.png" type="Texture" id=5]
 [ext_resource path="res://models/player/Leg.obj" type="ArrayMesh" id=6]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=7]
-[ext_resource path="res://prefabs/Camera.tscn" type="PackedScene" id=8]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 1 )
@@ -367,17 +366,18 @@ tracks/8/keys = {
 
 [node name="PathFollow" type="PathFollow"]
 rotation_mode = 1
+loop = false
 script = ExtResource( 7 )
 velocity = 0.1
 
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, -5.70256e-08, 0.757964, 0.652297, 6.62633e-08, 0.652297, -0.757964, 0, 17.3934, -16.2112 )
+
+[node name="DeathEffectSpawnPoint" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.60721, -0.811615 )
+
 [node name="Player" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.641884, 0 )
-
-[node name="Target" type="Position3D" parent="Player"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.95924, -0.845065 )
-
-[node name="Camera" parent="Player/Target" instance=ExtResource( 8 )]
-transform = Transform( -1, 0, 8.74228e-08, 3.72753e-08, 0.904544, 0.426379, -7.90778e-08, 0.426379, -0.904544, 0, 2.48355, -6.61374 )
 
 [node name="Body" type="MeshInstance" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.24574, 0 )
