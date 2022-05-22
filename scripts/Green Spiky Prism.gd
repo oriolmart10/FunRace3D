@@ -64,3 +64,7 @@ func _physics_process(delta):
 						fin_time = ini_time
 						tot_trans = 0
 						dir_chosen = DIRECTION.Z_POS
+
+
+func _on_Area_body_entered(body):
+	body.death()

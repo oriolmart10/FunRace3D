@@ -4,7 +4,6 @@
 [ext_resource path="res://models/deadly_churros.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://scripts/Xurros.gd" type="Script" id=3]
 
-
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 1 )
 
@@ -31,3 +30,5 @@ shape = SubResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.413342, 0 )
 shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
