@@ -11,4 +11,4 @@ func _on_Timer_timeout():
 func shoot_projectile():
 	var bullet = Bullet.instance()
 	add_child(bullet)
-	bullet.translate(Vector3(0.0, 3.4, 0.0))
+	bullet.translate(Vector3(-0.2, 3.4, 0.0))

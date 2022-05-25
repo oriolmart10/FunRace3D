@@ -17,5 +17,5 @@ func make_death_effect():
 	var deathEffect = DeathEffect.instance()
 	get_parent().add_child(deathEffect)
 	deathEffect.scale = Vector3(0.6,0.6,0.6)
-	deathEffect.translate(Vector3(0.0, 3.5, 0.0))
+	deathEffect.translate(Vector3(0.0, 4.0, 0.0))
 	visible = false
