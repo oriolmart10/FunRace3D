@@ -13,7 +13,7 @@ extents = Vector3( 10.4003, 0.414938, 0.384958 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.402263, 0.391065, 10.3527 )
 
-[node name="Spatial" type="Spatial"]
+[node name="Xurros" type="Spatial"]
 script = ExtResource( 3 )
 direction = 1
 
