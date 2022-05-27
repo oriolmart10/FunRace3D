@@ -59,3 +59,6 @@ func _physics_process(delta):
 								ini_time = OS.get_ticks_msec()
 								fin_time = ini_time
 								total_degrees = 0
+
+func _on_Area_body_entered(body):
+	body.death()

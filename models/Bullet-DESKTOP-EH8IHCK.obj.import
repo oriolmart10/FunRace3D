@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Bullet-DESKTOP-EH8IHCK.obj-ed595243159400acc9cbd40f345b8ee8.mesh"
+
+[deps]
+
+files=[ "res://.import/Bullet-DESKTOP-EH8IHCK.obj-ed595243159400acc9cbd40f345b8ee8.mesh" ]
+
+source_file="res://models/Bullet-DESKTOP-EH8IHCK.obj"
+dest_files=[ "res://.import/Bullet-DESKTOP-EH8IHCK.obj-ed595243159400acc9cbd40f345b8ee8.mesh", "res://.import/Bullet-DESKTOP-EH8IHCK.obj-ed595243159400acc9cbd40f345b8ee8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
