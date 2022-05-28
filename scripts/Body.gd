@@ -22,5 +22,8 @@ func make_death_effect():
 	set_collision_layer_bit(0, false)
 	set_collision_mask_bit(0, false)
 
+func crawlTrigger():
+	get_parent().crawl()
+
 func victory():
 	pass
