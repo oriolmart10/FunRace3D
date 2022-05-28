@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://deadly_churros.png" type="Texture" id=1]
-[ext_resource path="res://deadly_churros.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/deadly_churros.png" type="Texture" id=1]
+[ext_resource path="res://models/deadly_churros.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://scripts/Xurros.gd" type="Script" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
@@ -13,7 +13,7 @@ extents = Vector3( 10.4003, 0.414938, 0.384958 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.402263, 0.391065, 10.3527 )
 
-[node name="Spatial" type="Spatial"]
+[node name="Xurros" type="Spatial"]
 script = ExtResource( 3 )
 direction = 1
 
