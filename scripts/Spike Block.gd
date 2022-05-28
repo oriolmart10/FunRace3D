@@ -77,19 +77,14 @@ func _physics_process(delta):
 			pass
 		STATE.ACTIVATED:
 			activ_timer()
-			print("activated")
 		STATE.WARNING:
 			warn_timer()
-			print("warn")
 		STATE.RELEASING:
 			raise_timer()
-			print("reling")
 		STATE.RELEASED:
 			released_timer()
-			print("rel")
 		STATE.RETRACT:
 			retract_timer()
-			print("retr")
 
 func _on_Area_body_entered(body):
 	if (not already_active):
