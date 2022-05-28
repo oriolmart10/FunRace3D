@@ -43,19 +43,11 @@ shadow_enabled = true
 [node name="HBoxContainer" parent="." instance=ExtResource( 4 )]
 
 [node name="Path" type="Path" parent="HBoxContainer/ViewportContainer/Viewport" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64, 1.6, 1.6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96, 1.6, 1.6 )
 curve = SubResource( 1 )
 
 [node name="PathFollow" parent="HBoxContainer/ViewportContainer/Viewport/Path" instance=ExtResource( 5 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
-
-[node name="Path2" type="Path" parent="HBoxContainer/ViewportContainer2/Viewport" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12, 1.6, 1.6 )
-curve = SubResource( 1 )
-
-[node name="PathFollow" parent="HBoxContainer/ViewportContainer2/Viewport/Path2" instance=ExtResource( 5 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
-left_player = false
 
 [node name="GridMap" parent="." instance=ExtResource( 1 )]
 mesh_library = ExtResource( 2 )

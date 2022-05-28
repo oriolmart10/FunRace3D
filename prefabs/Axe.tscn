@@ -8,7 +8,7 @@
 albedo_texture = ExtResource( 2 )
 
 [sub_resource type="CylinderShape" id=2]
-radius = 4.95675
+radius = 4.52368
 height = 0.3
 
 [sub_resource type="Animation" id=3]

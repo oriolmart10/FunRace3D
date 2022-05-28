@@ -673,6 +673,8 @@ velocity = 0.1
 transform = Transform( -1, 4.61853e-14, -8.74228e-08, -5.5683e-08, 0.770913, 0.63694, 6.73954e-08, 0.63694, -0.770913, 0, 10.969, -8.19706 )
 
 [node name="Player" type="KinematicBody" parent="."]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 7 )
 
 [node name="Body" type="Spatial" parent="Player"]

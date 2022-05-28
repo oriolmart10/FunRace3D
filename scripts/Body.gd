@@ -19,6 +19,8 @@ func make_death_effect():
 	deathEffect.scale = Vector3(0.6,0.6,0.6)
 	deathEffect.translate(Vector3(0.0, 4.0, 0.0))
 	visible = false
+	set_collision_layer_bit(0, false)
+	set_collision_mask_bit(0, false)
 
 func victory():
 	pass
