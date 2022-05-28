@@ -3,15 +3,23 @@ extends PathFollow
 onready var animationPlayer = $Player/AnimationPlayer
 
 export(float) var velocity = 0.0
+export(bool) var left_player = true
 
 var current_state = IDLE
 var respawn_point = 0
+var key_to_press = ""
 
 enum {RUN, IDLE, DEATH}
 
+func _ready():
+	if left_player:
+		key_to_press = "ui_run_left_player"
+	else:
+		key_to_press = "ui_run_right_player"
+
 func _physics_process(delta):
 	if current_state != DEATH:
-		if Input.is_action_pressed("ui_walk"):
+		if Input.is_action_pressed(key_to_press):
 			current_state = RUN
 			offset = offset + velocity
 			if current_state == RUN:
