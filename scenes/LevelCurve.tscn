@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://prefabs/GridMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/Level01.meshlib" type="MeshLibrary" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/SplitScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://prefabs/Cannon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://prefabs/Spike Block.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -27,7 +28,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 [node name="GridMap" parent="." instance=ExtResource( 1 )]
 mesh_library = ExtResource( 2 )
 data = {
-"cells": PoolIntArray( 0, 0, 0, 65535, 0, 0, 0, 1, 0, 65535, 1, 0, 0, 2, 0, 65535, 2, 0, 0, 3, 0, 65535, 3, 0, 0, 4, 0, 65535, 4, 0, 0, 5, 0, 65535, 5, 0, 0, 6, 0, 65535, 6, 0, 0, 7, 0, 65535, 7, 0, 0, 8, 0, 65535, 8, 0, 0, 9, 0, 65535, 9, 0, 0, 10, 0, 65535, 10, 0, 0, 11, 0, 65534, 11, 0, 65535, 11, 0, 0, 12, 0, 65533, 12, 0, 65534, 12, 0, 65535, 12, 0, 0, 13, 0, 65526, 13, 0, 65527, 13, 0, 65528, 13, 0, 65529, 13, 0, 65530, 13, 0, 65531, 13, 0, 65532, 13, 0, 65533, 13, 0, 65534, 13, 0, 65535, 13, 0, 0, 14, 0, 65526, 14, 0, 65527, 14, 0, 65528, 14, 0, 65529, 14, 0, 65530, 14, 0, 65531, 14, 0, 65532, 14, 0, 65533, 14, 0, 65534, 14, 0, 65535, 14, 0, 0, 15, 0, 65535, 15, 0, 0, 16, 0, 65535, 16, 0, 0, 17, 0, 65535, 17, 0, 0, 18, 0, 65535, 18, 0, 0, 19, 0, 65535, 19, 0, 0, 20, 0, 65535, 20, 0, 0, 21, 0, 65535, 21, 0, 0, 22, 0, 65535, 22, 0 )
+"cells": PoolIntArray( 0, 0, 0, 65535, 0, 0, 0, 1, 0, 65535, 1, 0, 0, 2, 0, 65535, 2, 0, 0, 3, 0, 65535, 3, 0, 0, 4, 0, 65535, 4, 0, 0, 5, 0, 65535, 5, 0, 0, 6, 0, 65535, 6, 0, 0, 7, 0, 65535, 7, 0, 0, 8, 0, 65535, 8, 0, 0, 10, 0, 65535, 10, 0, 0, 11, 0, 65534, 11, 0, 65535, 11, 0, 0, 12, 0, 65533, 12, 0, 65534, 12, 0, 65535, 12, 0, 0, 13, 0, 65526, 13, 0, 65527, 13, 0, 65528, 13, 0, 65529, 13, 0, 65530, 13, 0, 65531, 13, 0, 65532, 13, 0, 65533, 13, 0, 65534, 13, 0, 65535, 13, 0, 0, 14, 0, 65526, 14, 0, 65527, 14, 0, 65528, 14, 0, 65529, 14, 0, 65530, 14, 0, 65531, 14, 0, 65532, 14, 0, 65533, 14, 0, 65534, 14, 0, 65535, 14, 0, 0, 15, 0, 65535, 15, 0, 0, 16, 0, 65535, 16, 0, 0, 17, 0, 65535, 17, 0, 0, 18, 0, 65535, 18, 0, 0, 19, 0, 65535, 19, 0, 0, 20, 0, 65535, 20, 0, 0, 21, 0, 65535, 21, 0, 0, 22, 0, 65535, 22, 0 )
 }
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -43,5 +44,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9247, 1.6, 22.4 )
 
 [node name="Cannon" parent="." instance=ExtResource( 6 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.8, 0, 9.6 )
+
+[node name="Spike Block" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777441, 0, 15.1932 )
+
+[node name="Spike Block2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83882, 0, 15.2048 )
 
 [editable path="HBoxContainer"]
