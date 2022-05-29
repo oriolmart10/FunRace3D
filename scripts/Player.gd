@@ -1,6 +1,7 @@
 extends PathFollow
 
 onready var animationPlayer = $Player/AnimationPlayer
+onready var animationCamera = $AnimationCamera
 
 export(float) var velocity = 0.0
 export(bool) var left_player = true
@@ -25,7 +26,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_invincible"):
 		change_invicnible_mode()
 	
-	if current_state != DEATH:
+	if current_state != DEATH and current_state != VICTORY:
 		if Input.is_action_pressed(key_to_press):
 			offset = offset + velocity
 			if (move_mode == 0):
@@ -34,21 +35,24 @@ func _physics_process(delta):
 				current_state = CRAWL
 			elif (move_mode == 2):
 				current_state = CLIMB
+			print(current_state)
 			play_avance_anim()
 		else:
 			current_state = IDLE
-			if (move_mode == 0):
-				animationPlayer.play("Idle")
-			elif (move_mode == 1):
-				animationPlayer.play("Idle_crawl")
-			elif (move_mode == 2):
-				animationPlayer.play("Idle")
+			animationPlayer.play("Idle")
+	
+	print(unit_offset)
+	if unit_offset == 1:
+		current_state = VICTORY
+		animationPlayer.play("Victory")
 
 
 func reset_position_to_spawPoint():
 	offset = respawn_point
 	$Player.visible = true
 	current_state = IDLE
+	move_mode = 0
+	animationCamera.play("ResetCamera")
 	$Player.set_collision_layer_bit(0, true)
 	$Player.set_collision_mask_bit(0, true)
 	
@@ -61,6 +65,21 @@ func set_death_state():
 
 func crawl():
 	move_mode = 1
+	print("Crawl mode")
+	
+
+func run():
+	move_mode = 0
+	print("Run mode")
+	
+func climb():
+	move_mode = 2
+
+func sideCamera():
+	animationCamera.play("SideCamera")
+
+func backCamera():
+	animationCamera.play("BackCamera")
 
 func change_invicnible_mode():
 	if invincible_mode:

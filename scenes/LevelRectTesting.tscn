@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://prefabs/GridMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/Level01.meshlib" type="MeshLibrary" id=2]
@@ -6,12 +6,13 @@
 [ext_resource path="res://scenes/SplitScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://prefabs/Cannon.tscn" type="PackedScene" id=6]
-[ext_resource path="res://prefabs/Axe.tscn" type="PackedScene" id=7]
+[ext_resource path="res://prefabs/ChangeRunMode.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/Green Spiky Prism.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/Windmill.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/RespawnPoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://materials/LevelRectTesting.gdshader" type="Shader" id=11]
-[ext_resource path="res://prefabs/CrawlTrigger.tscn" type="PackedScene" id=12]
+[ext_resource path="res://prefabs/RoofCollision.tscn" type="PackedScene" id=12]
+[ext_resource path="res://prefabs/ChangeCamera.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -52,7 +53,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 [node name="GridMap" parent="." instance=ExtResource( 1 )]
 mesh_library = ExtResource( 2 )
 data = {
-"cells": PoolIntArray( 0, 0, 0, 65535, 0, 0, 0, 1, 0, 65535, 1, 0, 0, 2, 0, 65535, 2, 0, 0, 3, 0, 65535, 3, 0, 0, 4, 0, 65535, 4, 0, 0, 5, 0, 65535, 5, 0, 0, 6, 0, 65535, 6, 0, 0, 7, 0, 65535, 7, 0, 0, 8, 0, 65535, 8, 0, 0, 9, 0, 65535, 9, 0, 0, 10, 0, 65535, 10, 0, 0, 11, 0, 65535, 11, 0, 0, 12, 0, 65535, 12, 0, 0, 13, 0, 65535, 13, 0, 0, 14, 0, 65535, 14, 0, 0, 15, 0, 65535, 15, 0, 0, 16, 0, 65535, 16, 0, 0, 17, 0, 65535, 17, 0, 0, 18, 0, 65535, 18, 0, 0, 19, 0, 65535, 19, 0, 0, 20, 0, 65535, 20, 0, 0, 21, 0, 65535, 21, 0, 0, 22, 0, 65535, 22, 0, 0, 23, 0, 65535, 23, 0, 0, 24, 0, 65535, 24, 0, 0, 25, 0, 65535, 25, 0, 0, 26, 0, 65535, 26, 0, 0, 27, 0, 65535, 27, 0, 0, 28, 0, 65535, 28, 0, 0, 29, 0, 65535, 29, 0, 0, 30, 0, 65535, 30, 0, 0, 31, 0, 65535, 31, 0, 0, 32, 0, 65535, 32, 0, 0, 33, 0, 65535, 33, 0, 0, 34, 0, 65535, 34, 0, 0, 35, 0, 65535, 35, 0, 0, 36, 0, 65535, 36, 0, 0, 37, 0, 65535, 37, 0, 0, 38, 0, 65535, 38, 0, 0, 39, 0, 65535, 39, 0, 0, 40, 0, 65535, 40, 0, 0, 41, 0, 65535, 41, 0, 0, 42, 0, 65535, 42, 0, 0, 43, 0, 65535, 43, 0, 0, 44, 0, 65535, 44, 0, 0, 45, 0, 65535, 45, 0, 0, 46, 0, 65535, 46, 0 )
+"cells": PoolIntArray( 0, 0, 0, 65535, 0, 0, 0, 1, 0, 65535, 1, 0, 0, 2, 0, 65535, 2, 0, 0, 3, 0, 65535, 3, 0, 0, 4, 0, 65535, 4, 0, 0, 5, 0, 65535, 5, 0, 0, 6, 0, 65535, 6, 0, 0, 7, 0, 65535, 7, 0, 0, 8, 0, 1, 8, 0, 65535, 8, 0, 65537, 8, 0, 131072, 8, 0, 131073, 8, 0, 0, 9, 0, 1, 9, 0, 65535, 9, 0, 65537, 9, 0, 131072, 9, 0, 131073, 9, 0, 0, 10, 0, 1, 10, 0, 65535, 10, 0, 65537, 10, 0, 131072, 10, 0, 131073, 10, 0, 0, 11, 0, 1, 11, 0, 65535, 11, 0, 65537, 11, 0, 131072, 11, 0, 131073, 11, 0, 0, 12, 0, 1, 12, 0, 65535, 12, 0, 65537, 12, 0, 131072, 12, 0, 131073, 12, 0, 0, 13, 0, 1, 13, 0, 65535, 13, 0, 65537, 13, 0, 131072, 13, 0, 131073, 13, 0, 0, 14, 0, 1, 14, 0, 65535, 14, 0, 65537, 14, 0, 131072, 14, 0, 131073, 14, 0, 0, 15, 0, 65535, 15, 0, 0, 16, 0, 65535, 16, 0, 0, 17, 0, 65535, 17, 0, 0, 18, 0, 65535, 18, 0, 0, 19, 0, 65535, 19, 0, 0, 20, 0, 65535, 20, 0, 0, 21, 0, 65535, 21, 0, 0, 22, 0, 65535, 22, 0, 0, 23, 0, 65535, 23, 0, 0, 24, 0, 65535, 24, 0, 0, 25, 0, 65535, 25, 0, 0, 26, 0, 65535, 26, 0, 0, 27, 0, 65535, 27, 0, 0, 28, 0, 65535, 28, 0, 0, 29, 0, 65535, 29, 0, 0, 30, 0, 65535, 30, 0, 0, 31, 0, 65535, 31, 0, 0, 32, 0, 65535, 32, 0, 0, 33, 0, 65535, 33, 0, 0, 34, 0, 65535, 34, 0, 0, 35, 0, 65535, 35, 0, 0, 36, 0, 65535, 36, 0, 0, 37, 0, 65535, 37, 0, 0, 38, 0, 65535, 38, 0, 0, 39, 0, 65535, 39, 0, 0, 40, 0, 65535, 40, 0, 0, 41, 0, 65535, 41, 0, 0, 42, 0, 65535, 42, 0, 0, 43, 0, 65535, 43, 0, 0, 44, 0, 65535, 44, 0, 0, 45, 0, 65535, 45, 0, 0, 46, 0, 65535, 46, 0 )
 }
 
 [node name="Flag" parent="." instance=ExtResource( 3 )]
@@ -65,23 +66,15 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.8, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0, 8 )
 
 [node name="Green Spiky Prism" parent="." instance=ExtResource( 8 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.6, 32 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.6, 60.8 )
 dir_chosen = 3
 distance = 4
 velocity = 4.0
 
 [node name="Windmill" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 6.4, 38.4 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 6.4, 43.2 )
 wind_type = 1
 face_dir = 1
-
-[node name="Windmill2" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 6.4, 44.8 )
-direction = 1
-face_dir = 1
-
-[node name="RespawnPoint" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018747, 2.52156, 28.8012 )
 
 [node name="RespawnPoint2" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57628e-07, 2.40794, 35.2 )
@@ -91,18 +84,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.284268, 48.6327 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
-[node name="Axe" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.207055, -0.772741, 0, 0.772741, 0.207055, 0, 0, 0, 0.8, -0.409307, 9.89218, 15.9256 )
+[node name="ChangeRunMode" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 11.2 )
+runMode = 1
 
-[node name="Axe2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.207055, -0.772741, 0, 0.772741, 0.207055, 0, 0, 0, 0.8, -0.409307, 9.89218, 19.1256 )
-DELAY = 2
+[node name="ChangeRunMode2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 28.8 )
 
-[node name="Axe3" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.207055, -0.772741, 0, 0.772741, 0.207055, 0, 0, 0, 0.8, -0.409307, 9.89218, 22.3256 )
-DELAY = 3
+[node name="RoofCollision" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 0.7, 0, 0, 0, 5.27, 1.12, 4.16, 18.24 )
 
-[node name="CrawlTrigger" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 11.2 )
+[node name="ChangeCamera" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 9.6 )
+
+[node name="ChangeCamera2" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 28.8 )
+cameraMode = 1
+
+[node name="ChangeCamera3" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 36.8 )
+
+[node name="ChangeCamera4" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 52.8 )
+cameraMode = 1
 
 [editable path="HBoxContainer"]

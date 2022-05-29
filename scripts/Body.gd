@@ -22,8 +22,19 @@ func make_death_effect():
 	set_collision_layer_bit(0, false)
 	set_collision_mask_bit(0, false)
 
-func crawlTrigger():
-	get_parent().crawl()
+func changeRunMode(var mode):
+	if mode == 0:
+		get_parent().run()
+	elif mode == 1:
+		get_parent().crawl()
+	elif mode == 2:
+		get_parent().climb()
+		
+func changeCamera(var mode):
+	if mode == 0:
+		get_parent().sideCamera()
+	elif mode == 1:
+		get_parent().backCamera()
 
 func victory():
 	pass
