@@ -26,6 +26,8 @@ func _ready():
 
 func _physics_process(delta):
 	
+	check_change_level()
+	
 	if Input.is_action_just_pressed("ui_invincible"):
 		change_invicnible_mode()
 	
@@ -108,7 +110,19 @@ func play_avance_anim():
 	elif current_state == CLIMB:
 		animationPlayer.play("Climb")
 
-
+func check_change_level():
+	if Input.is_action_just_pressed("level01"):
+		get_tree().change_scene("res://scenes/Level01.tscn")
+	elif Input.is_action_just_pressed("level02"):
+		get_tree().change_scene("res://scenes/Level02.tscn")
+	elif Input.is_action_just_pressed("level03"):
+		get_tree().change_scene("res://scenes/Level03.tscn")
+	elif Input.is_action_just_pressed("level04"):
+		get_tree().change_scene("res://scenes/Level04.tscn")
+	elif Input.is_action_just_pressed("level05"):
+		get_tree().change_scene("res://scenes/Level05.tscn")
+	
+	
 func _on_ChangeLevel_timeout():
 	match level:
 		1:

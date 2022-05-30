@@ -1272,7 +1272,7 @@ script = ExtResource( 8 )
 velocity = 0.08
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, 5.5683e-08, -6.73954e-08, 0, 0.770914, 0.63694, 8.74228e-08, 0.63694, -0.770914, 0, 12.7082, -9.4719 )
+transform = Transform( -1, 5.56831e-08, -6.73954e-08, 0, 0.770914, 0.63694, 8.74228e-08, 0.63694, -0.770914, 0, 12.7082, -9.4719 )
 
 [node name="Player" type="KinematicBody" parent="."]
 collision_layer = 3

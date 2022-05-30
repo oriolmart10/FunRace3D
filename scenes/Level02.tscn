@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/SplitScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/GridMap.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://prefabs/Xurros.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/Cannon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/RespawnPoint.tscn" type="PackedScene" id=10]
+[ext_resource path="res://materials/LevelRectTesting.gdshader" type="Shader" id=11]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -22,6 +23,20 @@ _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0, 0, 1.6, 0, 0, -2.56, 0, 0, 2.56, 0, 0, 33.6, 0, 0, -2.88, 0, 0, 2.88, 1.6, 0, 38.4, 0, 0, -2.08, 0, 0, 2.08, 1.6, 0, 51.2, -1.12, 0, 0, 1.12, 0, 0, 6.4, 0, 56, -2.08, 0, 0, 2.08, 0, 0, 49.6, 0, 56, 0, 0, -1.76, 0, 0, 1.76, 54.4, 0, 60.8, 0, 0, 0, 0, 0, 0, 54.4, 0, 89.6 ),
 "tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 )
 }
+
+[sub_resource type="PlaneMesh" id=3]
+size = Vector2( 200, 200 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 11 )
+shader_param/WATER_COL = Color( 0.439216, 0.65098, 0.956863, 1 )
+shader_param/WATER2_COL = Color( 0.372549, 0.580392, 0.862745, 1 )
+shader_param/FOAM_COL = Color( 0.862745, 0.964706, 0.968627, 1 )
+shader_param/distortion_speed = 2.0
+shader_param/tile = Vector2( 200, 200 )
+shader_param/height = 2.0
+shader_param/wave_size = Vector2( 2, 2 )
+shader_param/wave_speed = 1.5
 
 [node name="Level02" type="Spatial"]
 
@@ -128,5 +143,10 @@ transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 59.2, 1, 72 )
 
 [node name="Cannon2" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 59.2, 1, 78.4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8, 0.035732, 90.2327 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [editable path="HBoxContainer"]
