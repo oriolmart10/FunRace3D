@@ -10,6 +10,8 @@ func _physics_process(delta):
 	velocity = min(velocity, MAX_VELOCITY)
 	
 	translate(Vector3(-velocity, 0.0, 0.0))
+	if get_translation().x < -25:
+		queue_free()
 
 
 func _on_VisibilityNotifier_screen_exited():
