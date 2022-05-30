@@ -23,6 +23,7 @@ func _physics_process(delta):
 			fin_time = OS.get_ticks_msec()
 			var elapsed = fin_time - ini_time
 			if (elapsed >= 1500): 
+				$AudioStreamPlayer3D.play()
 				curr_state = STATE.MOVING
 				fin_time = 0
 				ini_time = 0
@@ -32,6 +33,7 @@ func _physics_process(delta):
 					tot_trans += abs(velocity*delta)
 					translate(Vector3(velocity*delta,0,0))
 					if (tot_trans >= distance):
+						$AudioStreamPlayer3D.stop()
 						curr_state = STATE.STOPPED
 						ini_time = OS.get_ticks_msec()
 						fin_time = ini_time
@@ -41,6 +43,7 @@ func _physics_process(delta):
 					tot_trans += abs(-velocity*delta)
 					translate(Vector3(-velocity*delta,0,0))
 					if (tot_trans >= distance):
+						$AudioStreamPlayer3D.stop()
 						curr_state = STATE.STOPPED
 						ini_time = OS.get_ticks_msec()
 						fin_time = ini_time
@@ -50,6 +53,7 @@ func _physics_process(delta):
 					tot_trans += abs(velocity*delta)
 					translate(Vector3(0,0,velocity*delta))
 					if (tot_trans >= distance):
+						$AudioStreamPlayer3D.stop()
 						curr_state = STATE.STOPPED
 						ini_time = OS.get_ticks_msec()
 						fin_time = ini_time
@@ -59,6 +63,7 @@ func _physics_process(delta):
 					tot_trans += abs(-velocity*delta)
 					translate(Vector3(0,0,-velocity*delta))
 					if (tot_trans >= distance):
+						$AudioStreamPlayer3D.stop()
 						curr_state = STATE.STOPPED
 						ini_time = OS.get_ticks_msec()
 						fin_time = ini_time

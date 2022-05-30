@@ -13,6 +13,7 @@ var key_to_press = ""
 var invincible_mode = false
 var move_mode = 0;
 var win = false
+var sound_playing = false
 
 enum {RUN, IDLE, DEATH, VICTORY, DEFEAT, CRAWL, CLIMB}
 
@@ -48,6 +49,9 @@ func _physics_process(delta):
 				animationPlayer.play("ClimbIdle")
 			
 	if unit_offset == 1:
+		if (not sound_playing):
+			$AudioStreamPlayer.play()
+			sound_playing = true
 		current_state = VICTORY
 		animationPlayer.play("Victory")
 		if (!win): 
@@ -111,4 +115,6 @@ func play_avance_anim():
 
 func _on_ChangeLevel_timeout():
 	print("LLEGOOO")
+	$AudioStreamPlayer.stop()
+	sound_playing = false
 	get_tree().change_scene("res://scenes/Credits.tscn")

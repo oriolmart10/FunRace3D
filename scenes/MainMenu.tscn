@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://audio/OptionPickedSound.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/OptionSelectSound.wav" type="AudioStream" id=4]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -77,7 +79,17 @@ rect_min_size = Vector2( 300, 0 )
 size_flags_horizontal = 4
 text = "SORTIR"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_mouse_entered"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/InstrButton" to="." method="_on_InstrButton_mouse_entered"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/InstrButton" to="." method="_on_InstrButton_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_mouse_entered"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_ExitButton_mouse_entered"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

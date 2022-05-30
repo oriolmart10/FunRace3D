@@ -39,6 +39,7 @@ func _physics_process(delta):
 			fin_time = OS.get_ticks_msec()
 			var elapsed = fin_time - ini_time
 			if (elapsed >= 1500): 
+				$AudioStreamPlayer3D.play()
 				curr_state = STATE.MOVING
 				fin_time = 0
 				ini_time = 0
@@ -47,6 +48,7 @@ func _physics_process(delta):
 				fin_time = OS.get_ticks_msec()
 				var elapsed = (delay*1000) - fin_time
 				if (elapsed <= 0): 
+					$AudioStreamPlayer3D.play()
 					fin_time = 0
 					active_delay = false
 			else:
@@ -56,6 +58,7 @@ func _physics_process(delta):
 						translate(Vector3(velocity*delta,0,0))
 						if (tot_trans >= distance and prism_type == TYPE.DISTANCE or (counter_dir and tot_trans >= counter_trans)):
 							curr_state = STATE.STOPPED
+							$AudioStreamPlayer3D.stop()
 							ini_time = OS.get_ticks_msec()
 							fin_time = ini_time
 							tot_trans = 0
@@ -66,6 +69,7 @@ func _physics_process(delta):
 						translate(Vector3(-velocity*delta,0,0))
 						if (tot_trans >= distance and prism_type == TYPE.DISTANCE or (counter_dir and tot_trans >= counter_trans)):
 							curr_state = STATE.STOPPED
+							$AudioStreamPlayer3D.stop()
 							ini_time = OS.get_ticks_msec()
 							fin_time = ini_time
 							tot_trans = 0
@@ -76,6 +80,7 @@ func _physics_process(delta):
 						translate(Vector3(0,0,velocity*delta))
 						if (tot_trans >= distance and prism_type == TYPE.DISTANCE or (counter_dir and tot_trans >= counter_trans)):
 							curr_state = STATE.STOPPED
+							$AudioStreamPlayer3D.stop()
 							ini_time = OS.get_ticks_msec()
 							fin_time = ini_time
 							tot_trans = 0
@@ -86,6 +91,7 @@ func _physics_process(delta):
 						translate(Vector3(0,0,-velocity*delta))
 						if (tot_trans >= distance and prism_type == TYPE.DISTANCE or (counter_dir and tot_trans >= counter_trans)):
 							curr_state = STATE.STOPPED
+							$AudioStreamPlayer3D.stop()
 							ini_time = OS.get_ticks_msec()
 							fin_time = ini_time
 							tot_trans = 0
@@ -94,6 +100,7 @@ func _physics_process(delta):
 
 
 func _on_Area_area_entered(_area):
+	$AudioStreamPlayer3D.stop()
 	curr_state = STATE.STOPPED
 	ini_time = OS.get_ticks_msec()
 	fin_time = ini_time

@@ -35,6 +35,7 @@ func _physics_process(delta):
 					fin_time = OS.get_ticks_msec()
 					var elapsed = fin_time - ini_time
 					if (elapsed >= 1500): 
+						$AudioStreamPlayer3D.play()
 						curr_state = STATE.MOVING
 						fin_time = 0
 						ini_time = 0
@@ -47,6 +48,7 @@ func _physics_process(delta):
 							rotate_y(-rotation)
 							total_degrees += rotation
 							if (total_degrees >= PI/2):
+								$AudioStreamPlayer3D.stop()
 								curr_state = STATE.STOPPED
 								ini_time = OS.get_ticks_msec()
 								fin_time = ini_time
@@ -61,6 +63,7 @@ func _physics_process(delta):
 							rotate_y(rotation)
 							total_degrees += rotation
 							if (total_degrees >= PI/2):
+								$AudioStreamPlayer3D.stop()
 								curr_state = STATE.STOPPED
 								ini_time = OS.get_ticks_msec()
 								fin_time = ini_time

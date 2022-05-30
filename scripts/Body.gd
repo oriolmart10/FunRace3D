@@ -12,6 +12,7 @@ func set_respawn_point():
 
 func _on_DeathTime_timeout():
 	get_parent().reset_position_to_spawPoint()
+	get_parent().get_child(4).stop()
 
 func make_death_effect():
 	var deathEffect = DeathEffect.instance()
@@ -21,6 +22,7 @@ func make_death_effect():
 	visible = false
 	set_collision_layer_bit(0, false)
 	set_collision_mask_bit(0, false)
+	get_parent().get_child(4).play()
 
 func changeRunMode(var mode):
 	if mode == 0:

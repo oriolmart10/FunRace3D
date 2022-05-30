@@ -50,6 +50,7 @@ func raise_timer():
 	child.translate(Vector3(0.0, 0.05, 0.0))
 	tot_trans += 0.05
 	if (tot_trans >= 1.7):
+		$AudioStreamPlayer3D.play()
 		curr_state = STATE.RELEASED
 		ini_time = OS.get_ticks_msec()
 		fin_time = ini_time
@@ -58,6 +59,7 @@ func released_timer():
 	fin_time = OS.get_ticks_msec()
 	var elapsed = fin_time - ini_time
 	if (elapsed >= 1500): 
+		$AudioStreamPlayer3D.stop()
 		curr_state = STATE.RETRACT
 		fin_time = 0
 		ini_time = 0
