@@ -16,6 +16,7 @@ func _ready():
 	
 func explosion():
 	var explEffect = ExplEffect.instance()
+	$AudioStreamPlayer3D.play()
 	add_child(explEffect)
 	$MeshInstance.visible = false
 	$Area.set_collision_layer_bit(0, false)

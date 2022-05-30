@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/SplitScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/GridMap.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://prefabs/Cannon.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/RespawnPoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://materials/LevelRectTesting.gdshader" type="Shader" id=11]
+[ext_resource path="res://audio/Levels.mp3" type="AudioStream" id=12]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -148,5 +149,10 @@ transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 59.2, 1, 78.4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8, 0.035732, 90.2327 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -3.5
+autoplay = true
 
 [editable path="HBoxContainer"]
