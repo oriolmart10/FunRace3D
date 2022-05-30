@@ -5,6 +5,7 @@ onready var animationCamera = $AnimationCamera
 
 export(float) var velocity = 0.0
 export(bool) var left_player = true
+export(int) var level = 1
 
 
 var current_state = IDLE
@@ -37,7 +38,6 @@ func _physics_process(delta):
 				current_state = CRAWL
 			elif (move_mode == 2):
 				current_state = CLIMB
-			print(current_state)
 			play_avance_anim()
 		else:
 			if move_mode <= 1: 
@@ -110,5 +110,15 @@ func play_avance_anim():
 
 
 func _on_ChangeLevel_timeout():
-	print("LLEGOOO")
-	get_tree().change_scene("res://scenes/Credits.tscn")
+	match level:
+		1:
+			get_tree().change_scene("res://scenes/Level02.tscn")
+		2:
+			get_tree().change_scene("res://scenes/Level03.tscn")
+		3:
+			get_tree().change_scene("res://scenes/Level04.tscn")
+		4:
+			get_tree().change_scene("res://scenes/Level05.tscn")
+		5:
+			get_tree().change_scene("res://scenes/Credits.tscn")
+	

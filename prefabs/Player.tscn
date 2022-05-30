@@ -30,7 +30,7 @@ height = 3.61571
 
 [sub_resource type="Animation" id=17]
 resource_name = "Climb"
-length = 1.5
+length = 0.9
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:translation")
@@ -63,7 +63,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.8 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 1.90773, 0 ), Vector3( 0, 1.8273, 0 ) ]
@@ -99,7 +99,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( -13.252, 180, -180 ), Vector3( 0.49, 180, -180 ), Vector3( -13.92, 180, -180 ) ]
@@ -123,7 +123,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.4, 0.9 ),
+"times": PoolRealArray( 0, 0.3, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( -7.344, 180, -180 ), Vector3( -12.502, 180, -180 ), Vector3( -0.675, 180, -180 ) ]
@@ -147,7 +147,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 3.95499e-07, -3.14254e-08, -9.086 ), Vector3( 0, 0, 0 ) ]
@@ -171,7 +171,7 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.9, 1.2 ),
+"times": PoolRealArray( 0, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 3.95585e-07, -3.14389e-08, -9.088 ), Vector3( 0, 0, 0 ) ]
@@ -1266,16 +1266,15 @@ tracks/1/keys = {
 }
 
 [node name="PathFollow" type="PathFollow"]
-rotation_mode = 1
+rotation_mode = 4
 loop = false
 script = ExtResource( 8 )
-velocity = 0.1
+velocity = 0.08
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, 5.56831e-08, -6.73954e-08, 0, 0.770914, 0.63694, 8.74228e-08, 0.63694, -0.770914, 0, 12.7082, -9.4719 )
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 collision_layer = 3
 collision_mask = 3
 script = ExtResource( 7 )
