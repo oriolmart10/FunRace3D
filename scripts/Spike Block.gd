@@ -22,7 +22,7 @@ var Spikes = preload("res://prefabs/Spikes.tscn")
 func activ_timer():
 	fin_time = OS.get_ticks_msec()
 	var elapsed = fin_time - ini_time
-	if (elapsed >= 1000): 
+	if (elapsed >= 200): 
 		curr_state = STATE.WARNING
 		ini_time = OS.get_ticks_msec()
 		fin_time = ini_time
@@ -34,7 +34,7 @@ func activ_timer():
 func warn_timer():
 	fin_time = OS.get_ticks_msec()
 	var elapsed = fin_time - ini_time
-	if (elapsed >= 1000): 
+	if (elapsed >= 200): 
 		curr_state = STATE.RELEASING
 		fin_time = 0
 		ini_time = 0
