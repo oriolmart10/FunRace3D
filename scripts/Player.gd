@@ -12,10 +12,12 @@ var respawn_point = 0
 var key_to_press = ""
 var invincible_mode = false
 var move_mode = 0;
+var win = false
 
 enum {RUN, IDLE, DEATH, VICTORY, DEFEAT, CRAWL, CLIMB}
 
 func _ready():
+	win = false
 	if left_player:
 		key_to_press = "ui_run_left_player"
 	else:
@@ -38,13 +40,19 @@ func _physics_process(delta):
 			print(current_state)
 			play_avance_anim()
 		else:
-			current_state = IDLE
-			animationPlayer.play("Idle")
-	
-	print(unit_offset)
+			if move_mode <= 1: 
+				current_state = IDLE
+				animationPlayer.play("Idle")
+			elif move_mode == 2:
+				current_state = IDLE
+				animationPlayer.play("ClimbIdle")
+			
 	if unit_offset == 1:
 		current_state = VICTORY
 		animationPlayer.play("Victory")
+		if (!win): 
+			win = true
+			$ChangeLevel.start(5)
 
 
 func reset_position_to_spawPoint():
@@ -74,6 +82,7 @@ func run():
 	
 func climb():
 	move_mode = 2
+	print("Climb mode")
 
 func sideCamera():
 	animationCamera.play("SideCamera")
@@ -96,3 +105,10 @@ func play_avance_anim():
 		animationPlayer.play("Run")
 	elif current_state == CRAWL:
 		animationPlayer.play("Crawl")
+	elif current_state == CLIMB:
+		animationPlayer.play("Climb")
+
+
+func _on_ChangeLevel_timeout():
+	print("LLEGOOO")
+	get_tree().change_scene("res://scenes/Credits.tscn")
